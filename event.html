@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Event</title>
+</head>
+<body>
+	<script>
+		addEventListener('click', addImage)
+		
+		function addImage(event)
+		{
+			let image = document.createElement('img'), size = 100 
+			image.setAttribute('src', `http://www.lorempixel.com/${size}/${size}/`)
+			image.style.position = 'absolute'
+			image.style.top = event.y - size/2 + 'px'
+			image.style.left = event.x - size/2 + 'px'
+			document.body.appendChild(image)
+		}
+	</script>
+</body>
+</html>
