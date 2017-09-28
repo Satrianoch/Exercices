@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Practice</title>
+</head>
+<body>
+	<script>
+		const nom = prompt('Quel est votre nom ?')
+		function tchat(text, nom_arg)
+		{
+			let pseudo = nom
+			if(nom_arg)pseudo = nom_arg
+			const p = document.createElement('p')
+			p.innerHTML = `<strong>${pseudo}</strong> : ${text}`
+			document.body.appendChild(p)
+		}
+	</script>
+</body>
+</html>
