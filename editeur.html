@@ -11,8 +11,12 @@
 	<script>
 		const text = document.querySelector('textarea')
 		const div = document.querySelector('div')
+		
+		text.value = localStorage.getItem('texte')
+		if(text.value) div.innerHTML = marked(localStorage.getItem('texte'))
 		text.addEventListener('keyup', function()
 		{
+			localStorage.setItem('texte', text.value)
 			div.innerHTML = marked(text.value)
 		})
 	</script>
