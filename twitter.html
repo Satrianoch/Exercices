@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Twitter</title>
+</head>
+<body>
+	<div style='width:300px'>
+		<textarea style='display:block; width: 98%;'></textarea>
+		<button style='display:block; margin: auto'>Twitter</button>
+	</div>
+	<script>
+		const text = document.querySelector('textarea'), btn = document.querySelector('button')
+		text.addEventListener('keyup', () => btn.disabled = text.value.length >= 140 ? 1 : 0)
+	</script>
+</body>
+</html>
