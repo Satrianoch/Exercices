@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Voyelles</title>
+</head>
+<body>
+	<textarea></textarea>
+	<script>
+		const text = document.querySelector('textarea')
+		const voyelles = ['a','e','i','o','u','y']
+		text.addEventListener('keypress', function(event)
+		{
+			if(voyelles.includes(event.key.toLowerCase())) event.preventDefault()
+		})
+	</script>
+</body>
+</html>
