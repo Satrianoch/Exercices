@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Editeur de texte</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.6/marked.js"></script>
+</head>
+<body>
+	<textarea></textarea>
+	<div></div>
+	<script>
+		const text = document.querySelector('textarea')
+		const div = document.querySelector('div')
+		text.addEventListener('keyup', function()
+		{
+			div.innerHTML = marked(text.value)
+		})
+	</script>
+</body>
+</html>
